@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'colorize'
+
 puts("You come upon an abandoned house with a dirty cracked door.")
 puts("The neglected sun-burnt lawn has a crooked mailbox as its only feature.")
 
@@ -11,7 +14,7 @@ until won_game
 	if input == "open the door"
 		if unlocked_door == true
 			won_game = true
-			puts("You win!")
+			puts("You win!".colorize(:yellow))
 		else
 			puts("It is locked.")
 		end
@@ -28,7 +31,7 @@ until won_game
 	elsif input == "unlock the door"
 		if took_key == true
 			unlocked_door = true
-			puts "The rusty lock clicks."
+			puts "Click."
 		else
 			puts "With what?"
 		end		
